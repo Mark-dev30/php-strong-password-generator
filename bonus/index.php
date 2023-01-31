@@ -1,5 +1,5 @@
 <?php
-include __DIR__ . '/functions.php';
+session_start();
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -21,13 +21,8 @@ include __DIR__ . '/functions.php';
                 <h2>Genera una password sicura</h2>
             </div>
         </div>
-        <div class="row">
-            <div class="col-12 password py-3">
-                <h3><?php echo (isset($value) && $value !== '') ? generatePassword($value, $charact) : 'Nessun Parametro inserito' ?></h3>
-            </div>
-        </div>
         <div class="row form mt-3 p-4">
-            <form action="index.php" class="d-flex" method="$_GET">
+            <form action="./pagePassword.php" class="d-flex" method="$_GET">
                 <div class="col-6">
                     <h4>Lunghezza Password:</h4>
                     <button type="submit" class="btn btn-primary">Invia</button>
